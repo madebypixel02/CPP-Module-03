@@ -6,7 +6,7 @@
 /*   By: aperez-b <aperez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 17:38:33 by aperez-b          #+#    #+#             */
-/*   Updated: 2022/09/23 14:07:08 by aperez-b         ###   ########.fr       */
+/*   Updated: 2022/09/23 18:45:03 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ FragTrap::~FragTrap(void)
 	std::cout << "FragTrap from ClapTrap " << this->_name << " destroyed." << std::endl;
 }
 
-FragTrap::FragTrap(FragTrap const &copy)
+FragTrap::FragTrap(FragTrap const &copy): ClapTrap(copy)
 {
 	std::cout << "FragTrap from ClapTrap " << this->_name << " copied." << std::endl;
 	*this = copy;

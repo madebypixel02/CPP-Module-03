@@ -6,7 +6,7 @@
 /*   By: aperez-b <aperez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 13:05:49 by aperez-b          #+#    #+#             */
-/*   Updated: 2022/09/23 15:39:19 by aperez-b         ###   ########.fr       */
+/*   Updated: 2022/09/23 19:03:47 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ DiamondTrap::~DiamondTrap(void)
 	std::cout << "DiamondTrap " << this->_name << " destroyed." << std::endl;
 }
 
-DiamondTrap::DiamondTrap(DiamondTrap const &copy)
+DiamondTrap::DiamondTrap(DiamondTrap const &copy): ClapTrap(copy), ScavTrap(copy), FragTrap(copy)
 {
 	std::cout << "DiamondTrap " << this->_name << " copied." << std::endl;
 	*this = copy;
