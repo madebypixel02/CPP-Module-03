@@ -6,7 +6,7 @@
 /*   By: aperez-b <aperez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 14:09:15 by aperez-b          #+#    #+#             */
-/*   Updated: 2022/09/22 19:07:41 by aperez-b         ###   ########.fr       */
+/*   Updated: 2022/09/23 12:05:10 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,9 @@ class ClapTrap
 		void	attack(std::string const &target);
 		void	takeDamage(unsigned int amount);
 		void	beRepaired(unsigned int amount);
+
+		/* Basic Operators */
+		ClapTrap	&operator=(ClapTrap const &copy);
 
 		/* Getters & Setters */
 		std::string const	&get_name(void) const;

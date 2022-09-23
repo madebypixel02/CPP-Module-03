@@ -6,7 +6,7 @@
 /*   By: aperez-b <aperez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 14:14:48 by aperez-b          #+#    #+#             */
-/*   Updated: 2022/09/22 19:10:37 by aperez-b         ###   ########.fr       */
+/*   Updated: 2022/09/23 12:34:07 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,16 @@ void	ClapTrap::beRepaired(unsigned int amount)
 		std::cout << "Cannot repair because: ClapTrap " << this->_name << " is dead." << std::endl;
 	else if (!this->_energy_points)
 		std::cout << "ClapTrap " << this->_name << " is out of energy points!" << std::endl;
+}
+
+ClapTrap	&ClapTrap::operator=(const ClapTrap &copy)
+{
+	std::cout << "Assignation operator for ClapTrap called." << std::endl;
+	this->_name = copy.get_name();
+	this->_hp = copy.get_hp();
+	this->_energy_points = copy.get_energy_points();
+	this->_damage = copy.get_damage();
+	return (*this);
 }
 
 std::string const	&ClapTrap::get_name(void) const

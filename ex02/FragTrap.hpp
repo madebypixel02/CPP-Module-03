@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperez-b <aperez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 17:37:20 by aperez-b          #+#    #+#             */
-/*   Updated: 2022/09/23 12:27:19 by aperez-b         ###   ########.fr       */
+/*   Updated: 2022/09/23 12:36:51 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
+#ifndef FRAGTRAP_HPP
 
-# define SCAVTRAP_HPP
+# define FRAGTRAP_HPP
 
-# include "ClapTrap.hpp"
+# include "ScavTrap.hpp"
 
-class ScavTrap: public ClapTrap
+class FragTrap: public ScavTrap
 {
 	public:
 		/* Constructors & Destructors */
-		ScavTrap(void);
-		ScavTrap(std::string name);
-		ScavTrap(ScavTrap const &copy);
-		~ScavTrap(void);
+		FragTrap(void);
+		FragTrap(std::string name);
+		FragTrap(FragTrap const &copy);
+		~FragTrap(void);
 
 		/* Basic Operators */
-		ScavTrap	&operator=(ScavTrap const &copy);
+		FragTrap	&operator=(FragTrap const &copy);
 
 		/* Main Member Functions */
-		void	guardGate(void);
+		void	highFivesGuys(void);
 };
 
 #endif

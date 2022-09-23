@@ -6,15 +6,15 @@
 /*   By: aperez-b <aperez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 14:22:36 by aperez-b          #+#    #+#             */
-/*   Updated: 2022/09/22 16:37:45 by aperez-b         ###   ########.fr       */
+/*   Updated: 2022/09/23 12:55:13 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "FragTrap.hpp"
 
 void	alice_rundown(void)
 {
-	ClapTrap alice("Alice");
+	FragTrap alice("Alice");
 
 	alice.attack("Bob");
 	alice.attack("Chris");
@@ -28,18 +28,22 @@ void	alice_rundown(void)
 	alice.attack("Kevin");
 	alice.attack("Laura");
 	alice.attack("Mike");
+	alice.guardGate();
+	alice.highFivesGuys();
 }
 
 void	bob_rundown(void)
 {
-	ClapTrap	bob("Bob");
+	FragTrap	bob("Bob");
 
 	while (bob.get_hp())
 	{
-		bob.takeDamage(2);
-		bob.beRepaired(2);
+		bob.takeDamage(20);
+		bob.beRepaired(10);
 	}
 	bob.takeDamage(1);
+	bob.guardGate();
+	bob.highFivesGuys();
 }
 
 int	main(void)

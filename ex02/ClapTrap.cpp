@@ -6,18 +6,18 @@
 /*   By: aperez-b <aperez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 14:14:48 by aperez-b          #+#    #+#             */
-/*   Updated: 2022/09/22 17:20:51 by aperez-b         ###   ########.fr       */
+/*   Updated: 2022/09/23 12:53:58 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(void): _name("default"), _hp(10), _energy_points(10), _damage(0)
+ClapTrap::ClapTrap(void): _name("default"), _hp(100), _energy_points(100), _damage(30)
 {
 	std::cout << "ClapTrap " << this->_name << " created with default constructor." << std::endl;
 }
 
-ClapTrap::ClapTrap(std::string name): _name(name), _hp(10), _energy_points(10), _damage(0)
+ClapTrap::ClapTrap(std::string name): _name(name), _hp(100), _energy_points(100), _damage(30)
 {
 	std::cout << "ClapTrap " << this->_name << " created." << std::endl;
 }
@@ -74,42 +74,52 @@ void	ClapTrap::beRepaired(unsigned int amount)
 		std::cout << "ClapTrap " << this->_name << " is out of energy points!" << std::endl;
 }
 
-std::string	ClapTrap::get_name(void)
+ClapTrap	&ClapTrap::operator=(const ClapTrap &copy)
+{
+	std::cout << "Assignation operator For ClapTrap called." << std::endl;
+	this->_name = copy.get_name();
+	this->_hp = copy.get_hp();
+	this->_energy_points = copy.get_energy_points();
+	this->_damage = copy.get_damage();
+	return (*this);
+}
+
+std::string const	&ClapTrap::get_name(void) const
 {
 	return (this->_name);
 }
 
-int	ClapTrap::get_hp(void)
+int const	&ClapTrap::get_hp(void) const
 {
 	return (this->_hp);
 }
 
-int	ClapTrap::get_energy_points(void)
+int const	&ClapTrap::get_energy_points(void) const
 {
 	return (this->_energy_points);
 }
 
-int	ClapTrap::get_damage(void)
+int const	&ClapTrap::get_damage(void) const
 {
 	return (this->_damage);
 }
 
-void	ClapTrap::set_name(std::string name)
+void	ClapTrap::set_name(std::string const &name)
 {
 	this->_name = name;
 }
 
-void	ClapTrap::set_hp(int value)
+void	ClapTrap::set_hp(int const &value)
 {
 	this->_hp = value;
 }
 
-void	ClapTrap::set_energy_points(int value)
+void	ClapTrap::set_energy_points(int const &value)
 {
 	this->_energy_points = value;
 }
 
-void	ClapTrap::set_damage(int value)
+void	ClapTrap::set_damage(int const &value)
 {
 	this->_damage = value;
 }

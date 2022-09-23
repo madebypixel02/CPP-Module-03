@@ -6,11 +6,11 @@
 #    By: aperez-b <aperez-b@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/14 14:11:00 by aperez-b          #+#    #+#              #
-#    Updated: 2022/09/22 17:38:18 by aperez-b         ###   ########.fr        #
+#    Updated: 2022/09/23 12:45:01 by aperez-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp ClapTrap.cpp FragTrap.cpp
+SRC = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 OBJ = $(SRC:.cpp=.o)
 CC = g++
 RM = rm -f
