@@ -6,7 +6,7 @@
 /*   By: aperez-b <aperez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 14:09:15 by aperez-b          #+#    #+#             */
-/*   Updated: 2022/09/23 13:33:13 by aperez-b         ###   ########.fr       */
+/*   Updated: 2022/09/23 15:49:54 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class ClapTrap
 		ClapTrap(std::string const &name);
 		ClapTrap(ClapTrap const &copy);
 		~ClapTrap(void);
-		
+
 		/* Main Member Functions */
 		void	attack(std::string const &target);
 		void	takeDamage(unsigned int amount);

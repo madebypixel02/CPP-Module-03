@@ -6,7 +6,7 @@
 /*   By: aperez-b <aperez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 14:14:48 by aperez-b          #+#    #+#             */
-/*   Updated: 2022/09/23 12:33:36 by aperez-b         ###   ########.fr       */
+/*   Updated: 2022/09/23 13:21:43 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ ClapTrap::ClapTrap(void): _name("default"), _hp(10), _energy_points(10), _damage
 	std::cout << "ClapTrap " << this->_name << " created with default constructor." << std::endl;
 }
 
-ClapTrap::ClapTrap(std::string name): _name(name), _hp(10), _energy_points(10), _damage(0)
+ClapTrap::ClapTrap(std::string const &name): _name(name), _hp(10), _energy_points(10), _damage(0)
 {
 	std::cout << "ClapTrap " << this->_name << " created." << std::endl;
 }

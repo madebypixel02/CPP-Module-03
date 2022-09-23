@@ -6,7 +6,7 @@
 /*   By: aperez-b <aperez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 17:38:33 by aperez-b          #+#    #+#             */
-/*   Updated: 2022/09/23 12:49:14 by aperez-b         ###   ########.fr       */
+/*   Updated: 2022/09/23 13:33:46 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ ScavTrap::ScavTrap(void)
 	std::cout << "ScavTrap from ClapTrap " << this->_name << " created with default constructor." << std::endl;
 }
 
-ScavTrap::ScavTrap(std::string name): ClapTrap(name)
+ScavTrap::ScavTrap(std::string const &name): ClapTrap(name)
 {
 	std::cout << "ScavTrap from ClapTrap " << this->_name << " created." << std::endl;
 }

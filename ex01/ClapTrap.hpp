@@ -6,7 +6,7 @@
 /*   By: aperez-b <aperez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 14:09:15 by aperez-b          #+#    #+#             */
-/*   Updated: 2022/09/23 12:05:10 by aperez-b         ###   ########.fr       */
+/*   Updated: 2022/09/23 13:22:02 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class ClapTrap
 	public:
 		/* Constructors & Destructors */
 		ClapTrap(void);
-		ClapTrap(std::string name);
+		ClapTrap(std::string const &name);
 		ClapTrap(ClapTrap const &copy);
 		~ClapTrap(void);
 		

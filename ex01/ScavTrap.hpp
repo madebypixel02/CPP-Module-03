@@ -6,7 +6,7 @@
 /*   By: aperez-b <aperez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 17:37:20 by aperez-b          #+#    #+#             */
-/*   Updated: 2022/09/23 12:27:19 by aperez-b         ###   ########.fr       */
+/*   Updated: 2022/09/23 13:32:58 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class ScavTrap: public ClapTrap
 	public:
 		/* Constructors & Destructors */
 		ScavTrap(void);
-		ScavTrap(std::string name);
+		ScavTrap(std::string const &name);
 		ScavTrap(ScavTrap const &copy);
 		~ScavTrap(void);
 

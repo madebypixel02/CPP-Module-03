@@ -1,35 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperez-b <aperez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/22 17:37:20 by aperez-b          #+#    #+#             */
-/*   Updated: 2022/09/23 14:04:53 by aperez-b         ###   ########.fr       */
+/*   Created: 2022/09/23 13:04:48 by aperez-b          #+#    #+#             */
+/*   Updated: 2022/09/23 14:43:08 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
+#pragma once
 
-# define FRAGTRAP_HPP
+# include "FragTrap.hpp"
 
-# include "ClapTrap.hpp"
-
-class FragTrap: public ClapTrap
+class DiamondTrap: public ScavTrap, public FragTrap
 {
+	private:
+		std::string	_name;
 	public:
 		/* Constructors & Destructors */
-		FragTrap(void);
-		FragTrap(std::string const &name);
-		FragTrap(FragTrap const &copy);
-		~FragTrap(void);
+		DiamondTrap(void);
+		DiamondTrap(std::string const &name);
+		DiamondTrap(DiamondTrap const &copy);
+		~DiamondTrap(void);
 
 		/* Basic Operators */
-		FragTrap	&operator=(FragTrap const &copy);
+		DiamondTrap	&operator=(DiamondTrap const &copy);
 
 		/* Main Member Functions */
-		void	highFivesGuys(void);
-};
+		void	whoAmI(void);
+		void	attack(std::string const &target);
 
-#endif
+		/* Getters & Setters */
+		std::string const	&get_name(void);
+		void				set_name(std::string const &name);
+};
