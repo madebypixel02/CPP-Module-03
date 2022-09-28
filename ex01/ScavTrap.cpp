@@ -6,7 +6,7 @@
 /*   By: aperez-b <aperez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 17:38:33 by aperez-b          #+#    #+#             */
-/*   Updated: 2022/09/23 18:43:37 by aperez-b         ###   ########.fr       */
+/*   Updated: 2022/09/28 10:58:11 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ ScavTrap::~ScavTrap(void)
 ScavTrap::ScavTrap(ScavTrap const &copy): ClapTrap(copy)
 {
 	std::cout << "ScavTrap from ClapTrap " << this->_name << " copied." << std::endl;
-	*this = copy;
 }
 
 ScavTrap	&ScavTrap::operator=(ScavTrap const &copy)

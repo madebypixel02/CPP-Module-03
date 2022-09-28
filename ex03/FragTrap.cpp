@@ -6,7 +6,7 @@
 /*   By: aperez-b <aperez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 17:38:33 by aperez-b          #+#    #+#             */
-/*   Updated: 2022/09/23 18:45:52 by aperez-b         ###   ########.fr       */
+/*   Updated: 2022/09/28 10:59:50 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ FragTrap::~FragTrap(void)
 FragTrap::FragTrap(FragTrap const &copy): ClapTrap(copy)
 {
 	std::cout << "FragTrap from ClapTrap " << this->_name << " copied." << std::endl;
-	*this = copy;
 }
 
 FragTrap	&FragTrap::operator=(FragTrap const &copy)
