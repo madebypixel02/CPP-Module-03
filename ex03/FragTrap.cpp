@@ -6,7 +6,7 @@
 /*   By: aperez-b <aperez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 17:38:33 by aperez-b          #+#    #+#             */
-/*   Updated: 2022/09/28 10:59:50 by aperez-b         ###   ########.fr       */
+/*   Updated: 2022/09/29 15:27:46 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ FragTrap::FragTrap(FragTrap const &copy): ClapTrap(copy)
 
 FragTrap	&FragTrap::operator=(FragTrap const &copy)
 {
-	std::cout << "Assignation operator for FragTrap called." << std::endl;
+	std::cout << "Assignment operator for FragTrap called." << std::endl;
 	ClapTrap::operator=(copy);
 	return (*this);
 }

@@ -6,7 +6,7 @@
 /*   By: aperez-b <aperez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 14:14:48 by aperez-b          #+#    #+#             */
-/*   Updated: 2022/09/23 13:21:43 by aperez-b         ###   ########.fr       */
+/*   Updated: 2022/09/29 15:27:21 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ void	ClapTrap::beRepaired(unsigned int amount)
 
 ClapTrap	&ClapTrap::operator=(const ClapTrap &copy)
 {
-	std::cout << "Assignation operator for ClapTrap called." << std::endl;
+	std::cout << "Assignment operator for ClapTrap called." << std::endl;
 	this->_name = copy.get_name();
 	this->_hp = copy.get_hp();
 	this->_energy_points = copy.get_energy_points();
